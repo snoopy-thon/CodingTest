@@ -1,6 +1,6 @@
 # 2021/08/30
 # DFS / BFS 알고리즘
-# 5-8. DFS 예제
+# 5-8. DFS 예제 / DFS(= 깊이 우선 탐색) : 그래프에서 깊은 부분을 우선으로 탐색하는 알고리즘
 # 이해잘안됨 다시 풀기
 
 # DFS 메서드 정의
@@ -10,7 +10,7 @@ def dfs(graph,v,visited):
     print(v,end=' ')
     # 현재 노드와 연결된 다른 노드를 재귀적으로 방문
     for i in graph[v]:
-        if not visited[i]:
+        if not visited[i]:  # visited[i]가 0이라면 다시 탐색하기
             dfs(graph,i,visited)
 
 # 각 노드가 연결된 정보를 리스트 자료형으로 표현(2차원 리스트)
@@ -26,7 +26,9 @@ graph = [
     [1,7]
     ]
 
+# 각 노드가 방문된 정보를 리스트 자료형으로 표현(1차원 리스트)
 visited = [False]*9
 
+# 정의된 DFS 함수 호출
 dfs(graph,1,visited)
 
