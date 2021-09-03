@@ -4,8 +4,24 @@
 # BFS 구현에서는 선입선출 방식인 큐 자료구조를 이용하는 것이 정석임.
 
 from collections import deque
+# BFS 메서드 정의
+# 나의 풀이 
+def bfs(graph,start,visited):
+    visited[start] = True
+    print(start,end=' ')
+    queue = deque()
+    queue.append(start)
+    while queue :
+        queue.popleft()
+        for i in graph[start]:
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = True
+                print(i,end=' ')
+        start += 1
 
 # BFS 메서드 정의
+# 교재 풀이
 def bfs(graph, start, visited):
     # 큐(Queue) 구현을 위해 deque 라이브러리 사용
     queue = deque([start])
