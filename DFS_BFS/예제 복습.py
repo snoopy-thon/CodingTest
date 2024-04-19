@@ -68,3 +68,16 @@ def factorial_recursive(n):
 
 print('반복적으로 구현:', factorial_iterative(5))
 print('재귀적으로 구현:',factorial_recursive(5))
+
+# 그래프 : 인접 행렬(2차원배열) / 인접 리스트(리스트)
+# 인접 행렬 예제
+INF = 999999999 # 무한의 비용 선언
+
+graph = [
+    [0,7,5],
+    [7,0,INF],
+    [5,INF,0]
+]
+
+print(graph)
+
