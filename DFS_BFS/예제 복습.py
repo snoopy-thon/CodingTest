@@ -1,6 +1,6 @@
 # 4/19/금
 # 126p stack 연습
-# stack 선입후출(Fisrt In Last Out)
+# stack 선입후출(First In Last Out)
 
 stack = []
 
@@ -52,3 +52,16 @@ def recursive_function(i):
     print(i,'번째 재귀함수를 종료합니다.')
 
 recursive_function(1)
+
+# 팩토리얼 예제
+# 반복적으로 구현한 n!
+def factorial_iterative(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+# 재귀적으로 구현한 n!
+def factorial_recursive(n):
+    if n <= 1 :
+        return 1
+    return n * factorial_iterative(n-1)
