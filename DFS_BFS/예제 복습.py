@@ -71,6 +71,7 @@ print('재귀적으로 구현:',factorial_recursive(5))
 
 # 그래프 : 인접 행렬(2차원배열) / 인접 리스트(리스트)
 # 인접 행렬 예제
+# 특징 : 모든 관계를 저장하므로 메모리가 불필요하게 낭비됨
 INF = 999999999 # 무한의 비용 선언
 
 graph = [
@@ -81,3 +82,15 @@ graph = [
 
 print(graph)
 
+# 인접 리스트 예제
+# 특징 : 특정한 두 노드가 연결되어 있는지에 대한 정보를 얻는 속도가 느림
+graph = [[] for _ in range(3)]
+
+graph[0].append((1, 7))
+graph[0].append((2, 5))
+
+graph[1].append((0, 7))
+
+graph[2].append((0, 5))
+
+print(graph)
