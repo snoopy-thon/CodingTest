@@ -9,12 +9,12 @@ def dfs(x, y):
   global sheep, wolf
   if x <= -1 or x >= R or y <= -1 or y >= C:
     return
-  if graph[x][y] == '.' or graph[x][y] == 'v' or graph[x] == 'k':
-    graph[x][y] = '#'
+  if graph[x][y] != '#':
     if graph[x][y] == 'v':
       wolf += 1
     elif graph[x][y] == 'k':
       sheep += 1
+    graph[x][y] = '#'
     dfs(x - 1, y)
     dfs(x, y - 1)
     dfs(x + 1, y)
