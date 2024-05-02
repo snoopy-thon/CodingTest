@@ -39,9 +39,7 @@ for i in range(R):
     if dfs(i, j) == True:
       if sheep > wolf:
         sh_result += sheep
-        wol_result -= wolf
       else:
-        sh_result -= sheep
         wol_result += wolf
 
       sheep = 0
